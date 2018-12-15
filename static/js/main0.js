@@ -1,7 +1,6 @@
 $(document).ready(function () {
     // Init
     $('.image-section').hide();
-    $('.image-section-pred').hide();
     $('.loader').hide();
     $('#result').hide();
 
@@ -13,7 +12,6 @@ $(document).ready(function () {
                 $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
                 $('#imagePreview').hide();
                 $('#imagePreview').fadeIn(650);
-
             }
             reader.readAsDataURL(input.files[0]);
         }
@@ -48,12 +46,6 @@ $(document).ready(function () {
                 $('.loader').hide();
                 $('#result').fadeIn(600);
                 $('#result').text(' Result:  ' + data);
-                //show the predicted image
-                $('.image-section-pred').show();
-                $('#imagepredicted').css('background-image', 'url(' + 'powerbank_out.png' + ')');
-                //$('#imagepredicted').fadeIn(650);
-                $("#imagepredicted").attr("powerbank_out.png");
-                $('#imagepredicted').show();
                 console.log('Success!');
             },
         });
